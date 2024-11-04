@@ -17,6 +17,8 @@ require('lspconfig').asm_lsp.setup{
     end
 }
 
+-- need to awake mason-lsp
+require('mason').setup({})
 require('mason-lspconfig').setup({
   ensure_installed = {},
   handlers = {
