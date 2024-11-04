@@ -11,15 +11,26 @@ lsp_zero.on_attach(function(client, bufnr)
 end)
 
 -- setting up root directory for asm_lsp
-require('lspconfig').asm_lsp.setup{
+require('lspconfig').asm_lsp.setup({
     root_dir = function()
         return vim.fn.getcwd()
     end
-}
+})
 
 -- need to awake mason-lsp
 require('mason').setup({})
 require('mason-lspconfig').setup({
+-- used lsps:
+-- typescript-language-server for js and ts 
+-- jdtls for java
+-- gopls for go 
+-- pyright for python
+-- clangd for c/c++ 
+-- csharp-language-server for c#
+-- lua-language-server for lua 
+-- cmake-lanuage-server for cmake 
+-- asm-lsp for assembly
+
   ensure_installed = {},
   handlers = {
     lsp_zero.default_setup,
