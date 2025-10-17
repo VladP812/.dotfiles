@@ -11,14 +11,28 @@ return require('packer').startup(function(use)
 	use {
 	    "VladP812/saturn.nvim",
         as = 'saturn',
-        config = function()
-            vim.cmd.colorscheme('saturn')
-        end
+        --config = function()
+         --   vim.cmd.colorscheme('saturn')
+        --end
 	}
+
+    use {
+        "sainnhe/gruvbox-material",
+        config = function()
+            vim.cmd.colorscheme("gruvbox-material")
+        end
+    }
+
+    -- buffer manager
+    use {
+        "VladP812/buffman.nvim",
+        as = "buffman"
+    }
+    -- transparency
     use {'xiyaowong/transparent.nvim',
         -- enable transparent mode on startup
         config = function()
-            vim.cmd('autocmd VimEnter * :TransparentEnable')
+            vim.cmd('autocmd VimEnter * :TransparentDisable')
         end
     }
 	-- syntax highlighting by parsing
@@ -27,7 +41,7 @@ return require('packer').startup(function(use)
 	use('vim-airline/vim-airline-themes')
 	-- status bar at the bottom
     use('vim-airline/vim-airline')
-    -- quick files navigation (favourite files list)
+    -- lsp
 	use {
 		'VonHeikemen/lsp-zero.nvim',
 		branch = 'v3.x',
@@ -42,5 +56,11 @@ return require('packer').startup(function(use)
 			{'hrsh7th/cmp-nvim-lsp'},
 		}
 	}
-
+    use {
+        "L3MON4D3/LuaSnip",
+        -- follow latest release.
+        tag = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
+        -- install jsregexp (optional!:).
+        run = "make install_jsregexp"
+    }
 end)

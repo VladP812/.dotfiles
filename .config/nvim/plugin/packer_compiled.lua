@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/home/inri/.cache/nvim/packer_hererocks/2.1.1725453128/share/lua/5.1/?.lua;/home/inri/.cache/nvim/packer_hererocks/2.1.1725453128/share/lua/5.1/?/init.lua;/home/inri/.cache/nvim/packer_hererocks/2.1.1725453128/lib/luarocks/rocks-5.1/?.lua;/home/inri/.cache/nvim/packer_hererocks/2.1.1725453128/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/home/inri/.cache/nvim/packer_hererocks/2.1.1725453128/lib/lua/5.1/?.so"
+local package_path_str = "/home/inri/.cache/nvim/packer_hererocks/2.1.1736781742/share/lua/5.1/?.lua;/home/inri/.cache/nvim/packer_hererocks/2.1.1736781742/share/lua/5.1/?/init.lua;/home/inri/.cache/nvim/packer_hererocks/2.1.1736781742/lib/luarocks/rocks-5.1/?.lua;/home/inri/.cache/nvim/packer_hererocks/2.1.1736781742/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/home/inri/.cache/nvim/packer_hererocks/2.1.1736781742/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -79,15 +79,21 @@ _G.packer_plugins = {
     path = "/home/inri/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
+  buffman = {
+    loaded = true,
+    path = "/home/inri/.local/share/nvim/site/pack/packer/start/buffman",
+    url = "https://github.com/VladP812/buffman.nvim"
+  },
   ["cmp-nvim-lsp"] = {
     loaded = true,
     path = "/home/inri/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
   },
-  harpoon = {
+  ["gruvbox-material"] = {
+    config = { "\27LJ\2\nD\0\0\3\0\4\0\0066\0\0\0009\0\1\0009\0\2\0'\2\3\0B\0\2\1K\0\1\0\21gruvbox-material\16colorscheme\bcmd\bvim\0" },
     loaded = true,
-    path = "/home/inri/.local/share/nvim/site/pack/packer/start/harpoon",
-    url = "https://github.com/ThePrimeagen/harpoon"
+    path = "/home/inri/.local/share/nvim/site/pack/packer/start/gruvbox-material",
+    url = "https://github.com/sainnhe/gruvbox-material"
   },
   ["lsp-zero.nvim"] = {
     loaded = true,
@@ -124,32 +130,16 @@ _G.packer_plugins = {
     path = "/home/inri/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
   },
-  ["plenary.nvim"] = {
-    loaded = true,
-    path = "/home/inri/.local/share/nvim/site/pack/packer/start/plenary.nvim",
-    url = "https://github.com/nvim-lua/plenary.nvim"
-  },
   saturn = {
-    config = { "\27LJ\2\n:\0\0\3\0\4\0\0066\0\0\0009\0\1\0009\0\2\0'\2\3\0B\0\2\1K\0\1\0\vsaturn\16colorscheme\bcmd\bvim\0" },
     loaded = true,
     path = "/home/inri/.local/share/nvim/site/pack/packer/start/saturn",
     url = "https://github.com/VladP812/saturn.nvim"
   },
-  ["telescope.nvim"] = {
-    loaded = true,
-    path = "/home/inri/.local/share/nvim/site/pack/packer/start/telescope.nvim",
-    url = "https://github.com/nvim-telescope/telescope.nvim"
-  },
   ["transparent.nvim"] = {
-    config = { "\27LJ\2\nI\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0*autocmd VimEnter * :TransparentEnable\bcmd\bvim\0" },
+    config = { "\27LJ\2\nJ\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0+autocmd VimEnter * :TransparentDisable\bcmd\bvim\0" },
     loaded = true,
     path = "/home/inri/.local/share/nvim/site/pack/packer/start/transparent.nvim",
     url = "https://github.com/xiyaowong/transparent.nvim"
-  },
-  undotree = {
-    loaded = true,
-    path = "/home/inri/.local/share/nvim/site/pack/packer/start/undotree",
-    url = "https://github.com/mbbill/undotree"
   },
   ["vim-airline"] = {
     loaded = true,
@@ -164,14 +154,14 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: saturn
-time([[Config for saturn]], true)
-try_loadstring("\27LJ\2\n:\0\0\3\0\4\0\0066\0\0\0009\0\1\0009\0\2\0'\2\3\0B\0\2\1K\0\1\0\vsaturn\16colorscheme\bcmd\bvim\0", "config", "saturn")
-time([[Config for saturn]], false)
 -- Config for: transparent.nvim
 time([[Config for transparent.nvim]], true)
-try_loadstring("\27LJ\2\nI\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0*autocmd VimEnter * :TransparentEnable\bcmd\bvim\0", "config", "transparent.nvim")
+try_loadstring("\27LJ\2\nJ\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0+autocmd VimEnter * :TransparentDisable\bcmd\bvim\0", "config", "transparent.nvim")
 time([[Config for transparent.nvim]], false)
+-- Config for: gruvbox-material
+time([[Config for gruvbox-material]], true)
+try_loadstring("\27LJ\2\nD\0\0\3\0\4\0\0066\0\0\0009\0\1\0009\0\2\0'\2\3\0B\0\2\1K\0\1\0\21gruvbox-material\16colorscheme\bcmd\bvim\0", "config", "gruvbox-material")
+time([[Config for gruvbox-material]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

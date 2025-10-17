@@ -3,8 +3,9 @@ alias cplsh='most_recent_screenshot=$(find ~/Pictures/Screenshots/ -type f -prin
 alias scsh='grim -g "$(slurp)" ~/Pictures/Screenshots/%Y-%m-%d_%H-%M-%S.png && cplsh'
 
 alias ll='ls -la'
-alias speaker='~/.dotfiles/btconnectspeaker.sh'
+alias speaker='~/.dotfiles/scripts/btconnectspeaker.sh'
 alias sspnd='sudo systemctl suspend'
+alias vpn='xray -c ~/Projects/Programming/ServerStuff/vpnconfig.json'
 
 PROMPT_COMMAND='PS1_CMD1=$(git branch --show-current 2>/dev/null)'; PS1='\[\e[38;5;105m\]\w\[\e[0m\] \[\e[38;5;241m\](\[\e[38;5;241m\]${PS1_CMD1}\[\e[38;5;240m\])\[\e[0m\] \n'
 
