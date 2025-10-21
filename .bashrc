@@ -6,8 +6,10 @@ alias ll='ls -la'
 alias speaker='~/.dotfiles/scripts/btconnectspeaker.sh'
 alias sspnd='sudo systemctl suspend'
 alias vpn='xray -c ~/Projects/Programming/ServerStuff/vpnconfig.json'
+alias lock='swaylock -f --image /mnt/hdd/Wallpapers/pandemomium.jpg --effect-blur 8x4'
 
 PROMPT_COMMAND='PS1_CMD1=$(git branch --show-current 2>/dev/null)'; PS1='\[\e[38;5;105m\]\w\[\e[0m\] \[\e[38;5;241m\](\[\e[38;5;241m\]${PS1_CMD1}\[\e[38;5;240m\])\[\e[0m\] \n'
 
 # Created by `pipx` on 2024-04-08 13:50:44
 export PATH="$PATH:/home/inri/.local/bin"
+
