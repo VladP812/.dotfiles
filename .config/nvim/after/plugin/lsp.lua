@@ -47,6 +47,7 @@ cmp.setup({
     }),
 })
 
+vim.api.nvim_set_keymap("n", "<leader>e", "<cmd>lua vim.diagnostic.open_float(nil, { focus = true })<CR>", { noremap = true, silent = true })
 vim.api.nvim_create_autocmd("LspAttach", {
   callback = function(args)
     local bufnr = args.buf
