@@ -1,6 +1,6 @@
 local config_path = vim.fn.stdpath('config')
 
--- opens up the directory where init.vim is stored
+-- opens the root directory of the config
 -- run with :lua cfg()
 
 function cfg()

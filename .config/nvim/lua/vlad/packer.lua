@@ -7,6 +7,14 @@ vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function(use)
 	-- Packer can manage itself
 	use 'wbthomason/packer.nvim'
+
+    use 'mason-org/mason.nvim'
+    use 'mason-org/mason-lspconfig.nvim'
+    use 'neovim/nvim-lspconfig'
+
+    use 'hrsh7th/cmp-nvim-lsp'
+    use 'hrsh7th/nvim-cmp'
+
 	-- color scheme
 	use {
 	    "VladP812/saturn.nvim",
@@ -15,7 +23,7 @@ return require('packer').startup(function(use)
          --   vim.cmd.colorscheme('saturn')
         --end
 	}
-
+    -- another colorscheme
     use {
         "sainnhe/gruvbox-material",
         config = function()
@@ -23,39 +31,19 @@ return require('packer').startup(function(use)
         end
     }
 
+
     -- buffer manager
     use {
         "VladP812/buffman.nvim",
         as = "buffman"
     }
-    -- transparency
-    use {'xiyaowong/transparent.nvim',
-        -- enable transparent mode on startup
-        config = function()
-            vim.cmd('autocmd VimEnter * :TransparentDisable')
-        end
-    }
+
 	-- syntax highlighting by parsing
 	use('nvim-treesitter/nvim-treesitter', {run = ":TSUpdate"})
 	-- themes for status bar
 	use('vim-airline/vim-airline-themes')
 	-- status bar at the bottom
     use('vim-airline/vim-airline')
-    -- lsp
-	use {
-		'VonHeikemen/lsp-zero.nvim',
-		branch = 'v3.x',
-		requires = {
-			--- Uncomment these if you want to manage LSP servers from neovim
-			{'williamboman/mason.nvim'},
-			{'williamboman/mason-lspconfig.nvim'},
-			-- LSP Support
-			{'neovim/nvim-lspconfig'},
-			-- Autocompletion
-			{'hrsh7th/nvim-cmp'},
-			{'hrsh7th/cmp-nvim-lsp'},
-		}
-	}
     use {
         "L3MON4D3/LuaSnip",
         -- follow latest release.

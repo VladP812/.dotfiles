@@ -95,20 +95,15 @@ _G.packer_plugins = {
     path = "/home/inri/.local/share/nvim/site/pack/packer/start/gruvbox-material",
     url = "https://github.com/sainnhe/gruvbox-material"
   },
-  ["lsp-zero.nvim"] = {
-    loaded = true,
-    path = "/home/inri/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",
-    url = "https://github.com/VonHeikemen/lsp-zero.nvim"
-  },
   ["mason-lspconfig.nvim"] = {
     loaded = true,
     path = "/home/inri/.local/share/nvim/site/pack/packer/start/mason-lspconfig.nvim",
-    url = "https://github.com/williamboman/mason-lspconfig.nvim"
+    url = "https://github.com/mason-org/mason-lspconfig.nvim"
   },
   ["mason.nvim"] = {
     loaded = true,
     path = "/home/inri/.local/share/nvim/site/pack/packer/start/mason.nvim",
-    url = "https://github.com/williamboman/mason.nvim"
+    url = "https://github.com/mason-org/mason.nvim"
   },
   ["nvim-cmp"] = {
     loaded = true,
@@ -135,12 +130,6 @@ _G.packer_plugins = {
     path = "/home/inri/.local/share/nvim/site/pack/packer/start/saturn",
     url = "https://github.com/VladP812/saturn.nvim"
   },
-  ["transparent.nvim"] = {
-    config = { "\27LJ\2\nJ\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0+autocmd VimEnter * :TransparentDisable\bcmd\bvim\0" },
-    loaded = true,
-    path = "/home/inri/.local/share/nvim/site/pack/packer/start/transparent.nvim",
-    url = "https://github.com/xiyaowong/transparent.nvim"
-  },
   ["vim-airline"] = {
     loaded = true,
     path = "/home/inri/.local/share/nvim/site/pack/packer/start/vim-airline",
@@ -154,10 +143,6 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: transparent.nvim
-time([[Config for transparent.nvim]], true)
-try_loadstring("\27LJ\2\nJ\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0+autocmd VimEnter * :TransparentDisable\bcmd\bvim\0", "config", "transparent.nvim")
-time([[Config for transparent.nvim]], false)
 -- Config for: gruvbox-material
 time([[Config for gruvbox-material]], true)
 try_loadstring("\27LJ\2\nD\0\0\3\0\4\0\0066\0\0\0009\0\1\0009\0\2\0'\2\3\0B\0\2\1K\0\1\0\21gruvbox-material\16colorscheme\bcmd\bvim\0", "config", "gruvbox-material")
